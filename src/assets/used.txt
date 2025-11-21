@@ -1,0 +1,5 @@
+Background Color => #0F0F0F
+Button Color => #A4FFAF
+font => - Roboto Mono
+        - JetBrains Mono
+
