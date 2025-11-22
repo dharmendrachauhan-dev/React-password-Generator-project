@@ -30,9 +30,11 @@ function Input() {
   }, [length, numberAllowed, characterAllowed, setPassword]);
 
   // Copy Text Logic
+const copyToClipBoard = useCallback(() => {
+  passwordref.current?.select()
+  window.navigator.clipboard.writeText(password)
+},[password])
   
-
-
 
   // Removed useEffect Auto call
 
@@ -64,6 +66,7 @@ function Input() {
               <button
                 className="bg-blue-400 size-13 text-white hover:bg-green-300
                                         cursor-pointer border-2 border-black"
+                onClick={copyToClipBoard}
               >
                 Copy
               </button>
